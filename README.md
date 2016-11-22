@@ -1,5 +1,4 @@
-# Main Street Hub UI Boilerplate
-This is the front-end starting point for all applications at Main Street Hub.
+# Example UI Boilerplate
 
 ## Batteries Included
 * [React](https://facebook.github.io/react/docs/getting-started.html) for rendering
