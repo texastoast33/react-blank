@@ -20,26 +20,6 @@
 <!-- HAVE FUN: Your app lives here -->
 <div id="app"></div>
 
-<!-- include the sidebar -->
-<script src="//sidebar.mainstreethub.com/sidebar.js"></script>
-
-<script>
-	// this can live here or in app.js
-	$SIDEBAR.init({
-		container: '.sidebar',
-		onAuthChange: function (isLoggedIn, user) {
-			/*
-			 * Authentication callback.
-			 * This is fired anytime a user is logged in or out.
-			 * Reference any auth-dependent methods for your app here.
-			 *
-			 * @param {Boolean} isLoggedIn
-			 * @param {Object} user
-			 */
-		}
-	})
-</script>
-
 <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
 <script src="<%=htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
 <% } %>

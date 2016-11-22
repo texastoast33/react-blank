@@ -1,18 +1,14 @@
 {
-  "name": "msh-ui-boilerplate",
+  "name": "ui-boilerplate",
   "version": "0.0.1",
-  "description": "This boilerplate is used to begin any new application at Main Street Hub.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mainstreethub/ui-boilerplate"
+    "url": "https://github.com/texastoast33/ui-boilerplate"
   },
   "keywords": [
     "framework",
     "boilerplate"
   ],
-  "bugs": {
-    "url": "https://github.com/mainstreethub/ui-boilerplate/issues"
-  },
   "dependencies": {
     "classnames": "^2.2.4",
     "react": "^15.0.1",
