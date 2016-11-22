@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= htmlWebpackPlugin.options.title %></title>
+
+	<% if (htmlWebpackPlugin.files.favicon) { %>
+	<link rel="shortcut icon" href="<%=htmlWebpackPlugin.files.favicon%>">
+	<% } %>
+	<% for (var css in htmlWebpackPlugin.files.css) { %>
+	<link href="<%=htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+	<% } %>
+
+</head>
+<body>
+
+<!-- DO NOT CHANGE: The sidebar lives here -->
+<div class="sidebar"></div>
+
+<!-- HAVE FUN: Your app lives here -->
+<div id="app"></div>
+
+<!-- include the sidebar -->
+<script src="//sidebar.mainstreethub.com/sidebar.js"></script>
+
+<script>
+	// this can live here or in app.js
+	$SIDEBAR.init({
+		container: '.sidebar',
+		onAuthChange: function (isLoggedIn, user) {
+			/*
+			 * Authentication callback.
+			 * This is fired anytime a user is logged in or out.
+			 * Reference any auth-dependent methods for your app here.
+			 *
+			 * @param {Boolean} isLoggedIn
+			 * @param {Object} user
+			 */
+		}
+	})
+</script>
+
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script src="<%=htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+<% } %>
+</body>
+</html>
